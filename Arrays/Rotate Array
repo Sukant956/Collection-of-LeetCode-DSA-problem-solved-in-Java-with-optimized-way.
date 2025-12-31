@@ -1,0 +1,36 @@
+//Problem : Rotate Array
+// Platform: Striver and LeetCode
+// Topic: Arrays
+// Approach: Using Function
+// Time Complexity: O(n)
+// Space Complexity: O(n) 
+
+//Code 
+
+class Solution {
+    public void rotate(int[] nums, int k) {
+        //handeling test case if the size of array is too large
+        int n = nums.length;
+         k = k % n;
+
+        // calling function passing array, starting point and end point
+
+        reverse(nums,0,n-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,n-1);
+    
+    }
+    public void reverse(int nums[],int start, int end){
+
+     // Swapping using third variable
+
+        while(start < end)
+        {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start++;
+            end--;
+        }
+    }
+}
