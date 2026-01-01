@@ -1,0 +1,32 @@
+// Problem: Max Consecutive Ones
+// Platform: LeetCode and Striver
+// Approach: using Math.max function
+// Time Complexity: 0(n)
+// Space Complexity: 0(1)
+
+// Code 
+
+// Math.max -> It is a function which return the maximum of it.
+  ex-> Math.max(10,20) output = 20
+
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+
+// We are creating two variables which stores the count of one (curr_count) and another will store the count of the maximum once(max_count).
+        int max_count = 0;
+        int curr_count = 0;
+        for(int i =0;i < nums.length;i++)
+        {
+            if(nums[i] == 1)
+            {
+                curr_count++;
+                max_count = Math.max(curr_count,max_count);
+            }
+            else 
+            {
+                curr_count = 0;  // if zero comes anywhere in the array we will set the current count equal zero and till in the max count it already stored max no of onces.
+            }
+        }
+        return max_count;
+    }
+}
