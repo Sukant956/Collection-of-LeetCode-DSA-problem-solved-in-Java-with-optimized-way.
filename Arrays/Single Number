@@ -1,0 +1,28 @@
+// Problem: Single Number
+// Platform: LeetCode and Striver
+// Approach: X-OR
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code 
+
+Truth Table for 
+a | b | output
+0   0    0
+1   0    1
+0   1    1
+1   1    0
+
+
+2 ^ 2  = 0
+
+class Solution {
+    public int singleNumber(int[] nums) {
+        int value = 0;
+        for(int i = 0;i<nums.length;i++)
+        {
+            value = value ^ nums[i];
+        }
+        return value;
+    }
+}
