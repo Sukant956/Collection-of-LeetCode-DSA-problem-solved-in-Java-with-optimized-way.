@@ -1,0 +1,28 @@
+//Problem: Move Zeroes
+// Platform: LeetCode and Striver
+// Topic: Arrays
+// Approach: Using for loops and while
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code 
+
+class Solution {
+    public void moveZeroes(int[] nums) {
+// taking a count variable
+        int count = 0; 
+
+        for(int i = 0;i < nums.length; i++) // traversing through the Array 
+        {
+            if(nums[i] != 0)
+            {
+                nums[count++] = nums[i];  // storing the value which is not equal to zero in the array 
+            }
+        }
+// Till here all the non zero comes in an array. 
+        while(count <nums.length)
+        {
+            nums[count++] = 0;  // Adding rest of the space with 0.
+        }
+    }
+}
