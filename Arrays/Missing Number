@@ -1,0 +1,20 @@
+// Problem: Missing Number
+// Platform: LeetCode and Striver
+// Approach: Summation Method
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Code
+sum of all natural numbers = n * (n+1)/2    
+class Solution {
+    public int missingNumber(int[] nums) {
+        int n = nums.length;
+        int sum = n * (n+1)/2;  // Finding the sum of all numbers present in an array
+        for(int i =0;i<n;i++)
+        {
+            sum = sum - nums[i]; // Substracting each and every numbers of array from sum of all the numbers of an array
+        }
+       return sum;
+    }
+     
+}
