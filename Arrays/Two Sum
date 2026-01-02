@@ -1,0 +1,24 @@
+// Problem: Two Sum
+// Platform: LeetCode and Striver
+// Approach: HashMap
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+//Code 
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer,Integer> hm = new HashMap<Integer,Integer>(); // Creating hashmap which will store the integer value in key and value pair of integer type
+        for(int i = 0;i< nums.length;i++)
+        {
+            int req_no = target - nums[i];
+            if(hm.containsKey(req_no))
+            {
+                int arr[] = {hm.get(req_no),i}; // get() will return the index of the required number
+                return arr;
+            }
+            hm.put(nums[i],i);
+        }
+        return null;        
+    }
+}
