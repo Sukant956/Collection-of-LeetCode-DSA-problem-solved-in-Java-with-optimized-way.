@@ -3,7 +3,7 @@
 // Topic: Arrays
 // Approach: Using for loops and while
 // Time Complexity: O(n)
-// Space Complexity: O(n)
+// Space Complexity: O(1)
 
 // Code 
 
