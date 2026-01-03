@@ -1,1 +1,27 @@
+// Problem: Reverse Words in a String
+// Platform: LeetCode and Striver
+// Approach: String Builder
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
+// Code 
+
+class Solution {
+    public String reverseWords(String s) {
+
+        // .split method is used to split a string into an Array of Words.
+
+        String []words = s.split(" +"); 
+
+        // Using String builder to store the words
+
+        StringBuilder sb = new StringBuilder();
+        for(int i = words.length - 1;i>= 0;i--)
+        {
+            sb.append(words[i]);
+            sb.append(" ");
+        }
+        return sb.toString().trim(); // trim function used to remove the extra space
+        // toString method is used to convert the string Builder into a string before returning it.
+    }
+}
