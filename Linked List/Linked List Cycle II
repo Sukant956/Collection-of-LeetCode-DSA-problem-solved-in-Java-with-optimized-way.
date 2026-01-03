@@ -1,0 +1,42 @@
+// Problem: Linked List Cycle II
+// Platform: LeetCode and Striver
+// Approach: Phase 2 - The Meeting Point
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Code 
+
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        // Handeling the null value
+
+        if(head == null || head.next == null)
+        {
+            return null;
+        }
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if(slow == fast)
+            {
+                break;
+            }
+        }
+        // Handeling the test Case if LL has only 2 elements
+        if(fast == null || fast.next == null)
+        {
+            return null;
+        }
+        fast = head;
+        while(fast != slow)
+        {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return slow;        
+    }
+}
