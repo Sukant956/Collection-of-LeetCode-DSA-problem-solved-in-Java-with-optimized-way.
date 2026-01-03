@@ -1,0 +1,46 @@
+// Problem: Check if Array Is Sorted and Rotated
+// Platform: LeetCode and Striver
+// Approach: Simulate and Verify
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code 
+
+class Solution {
+    public boolean check(int[] nums) {
+        int n = nums.length;
+        boolean isIncreasing = true;
+        int pivot = 0;
+
+        for(int i =1;i<n;i++){
+            if(nums[i] < nums[i-1])
+            {
+                pivot = i;
+                isIncreasing = false;
+                break;
+            }
+        }
+        if(isIncreasing){
+            return true;
+        }
+        // Finding rotation
+        int rotation = n - pivot;
+        int rotatedArray[] = new int[n];
+        // Position of new Array
+        for(int i = 0;i<n;i++)
+        {
+            rotatedArray[(i + rotation) % n] = nums[i];
+        }
+
+        // Again checking whether the element are sorted or not
+
+        for(int i = 1;i < n;i++)
+        {
+            if(rotatedArray[i] < rotatedArray [i-1])
+            {
+            return false;
+            }
+        }
+        return true;
+    }
+}
