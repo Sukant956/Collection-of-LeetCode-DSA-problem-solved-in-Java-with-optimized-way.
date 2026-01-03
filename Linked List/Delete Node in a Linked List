@@ -1,0 +1,17 @@
+// Problem: Delete Node in a Linked List
+// Platform: LeetCode and Striver
+// Approach: Value Overriding
+// Time Complexity: O(1)
+// Space Complexity: O(1)
+
+// Code 
+
+class Solution {
+    public void deleteNode(ListNode node) {
+
+        // node.val represent the given node
+
+        node.val = node.next.val;
+        node.next = node.next.next;        
+    }
+}
