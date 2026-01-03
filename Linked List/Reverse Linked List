@@ -1,0 +1,28 @@
+// Probem: Reverse Linked List
+// Platform: LeetCode
+// Approach: Iterative Pointer Reversal
+// Time Complxity: O(n)
+// Space Complexity: O(1)
+
+// Code 
+
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+
+      // Defining the three variable 
+      
+        ListNode prev = null;  // points towards null 
+        ListNode curr = head;  // curr will point to the head
+        ListNode temp;   // temp to store the next value
+
+        while(curr != null)  // traversing through the LL
+        {
+            temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        return prev;
+    }
+}
