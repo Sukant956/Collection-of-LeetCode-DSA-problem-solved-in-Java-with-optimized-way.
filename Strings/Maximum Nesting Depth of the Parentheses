@@ -1,0 +1,29 @@
+// Problem: Maximum Nesting Depth of the Parentheses
+// Platform: LeetCode and Striver
+// Approach: Balance Counter
+// Time Complexity: O(n)
+// Space Complexity: O(n) or O(1)
+
+// Code 
+
+class Solution {
+    public int maxDepth(String s) {
+
+// Defining two variable to calculate the open and closing of the paranthesis
+        int depth = 0;
+        int open = 0;
+
+        for(char c: s.toCharArray()) // Traversing and converting the string into character array
+           {
+            if(c == '(') 
+            {
+                open++;
+            }
+            if(c == ')'){
+                open--;
+            }
+            depth = Math.max(open,depth); // Calculating the depth maths.max return the maximum of the value
+        }
+        return depth;
+    }
+}
