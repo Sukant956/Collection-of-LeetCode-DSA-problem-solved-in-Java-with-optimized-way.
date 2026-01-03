@@ -1,0 +1,16 @@
+// Problem: Rotate String
+// Platform: LeetCode and Striver
+// Approach: String Concatenation & Substring Search
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code 
+
+class Solution {
+    public boolean rotateString(String s, String goal) {
+
+// checking length and comparing it from the main string
+
+        return (s.length() == goal.length() && (s+s).contains(goal));        
+    }
+}
