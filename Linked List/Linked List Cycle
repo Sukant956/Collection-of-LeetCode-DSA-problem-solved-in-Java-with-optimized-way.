@@ -1,0 +1,31 @@
+// Problem: Linked List Cycle
+// Platform: LeetCode and Striver
+// Approach: Slow and Fast pointer(Two Pointer)
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Code 
+
+
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+
+// Creating Two Pointer 
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast != null && fast.next != null) // Traversing
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+
+// If both are equal then they are meeting at some point
+
+            if(slow == fast)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+}
