@@ -1,0 +1,36 @@
+// Problem: Valid Anagram
+// Platform: LeetCode and Anagram
+// Approach: Sorting and Comparision
+// Time Complexity: O(n log n)
+// Space Complexity: O(n)
+
+// Code 
+
+class Solution {
+    public boolean isAnagram(String s, String t) {
+
+// Converting both the array to the character Array
+        char ch1[] = s.toCharArray();
+        char ch2[] = t.toCharArray();
+
+// Comparing the length of the both array
+        if(ch1.length != ch2.length)
+        {
+            return false;
+        }
+
+// Sorting both the Character Array
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
+
+// Traversing and comparing each and every element form the character Array
+
+        for(int i = 0;i < ch1.length;i++){
+            if(ch1[i] != ch2[i])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
