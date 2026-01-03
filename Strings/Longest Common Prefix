@@ -1,0 +1,33 @@
+// Problem: Longest Common Prefix
+// Platform: LeetCode and Striver
+// Approach: Sorting Based Comparision
+// Time Complexity: O(n.log n. m)
+// Space Complexity: O(m.n)
+
+// Code 
+
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        Arrays.sort(strs);  // Sort the array 
+
+// Storing the first and last element present in an array 
+
+        String str1 = strs[0];  
+        String str2 = strs[strs.length - 1];
+        int index = 0;
+
+// Comparing Only first and last because elements present between them is already sorted we are just finding the length till where we have to return 
+        while(index < str1.length())
+        {
+            if(str1.charAt(index) == str2.charAt(index))
+            {
+                index ++;
+            }
+            else {
+                break;
+            }
+            
+        }
+       return index == 0 ? "":str1.substring(0,index);  // Here we are returning it to the index becuse substring return one less at this stage when loop came index will be already one step a head.
+    }
+}
