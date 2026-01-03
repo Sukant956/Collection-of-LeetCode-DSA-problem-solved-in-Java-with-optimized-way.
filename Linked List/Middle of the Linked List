@@ -1,1 +1,23 @@
+// Problem: Middle of the Linked List
+// Platform: LeetCode and Striver
+// Approach: Slow and Fast Pointer(Two Pointer)
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 
+// Code 
+
+class Solution {
+    public ListNode middleNode(ListNode head) {
+
+// defining the slow and fast pointer both will start from head 
+        ListNode slow  = head;
+        ListNode fast = head;
+
+        while(fast != null && fast.next != null )  // traversing through LL 
+        {
+            slow = slow.next;  // Slow will move by one step
+            fast = fast.next.next;  // Fast will move by two step
+        }
+        return slow; // at the end slow will point the middle of the LL
+    }
+}
