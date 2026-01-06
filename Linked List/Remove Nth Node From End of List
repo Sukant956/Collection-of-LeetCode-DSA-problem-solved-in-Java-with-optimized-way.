@@ -1,0 +1,43 @@
+// Problem: Remove Nth Node From End of List
+// Platform: LeetCode and Striver
+// Approach: The Two-Pass Approach
+// Time Complexity: O(L) here L is the number of nodes present in the linked list
+// Space Complexity: O(1)
+
+// Code 
+
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) // here n is the number of node which we have to replace
+      {
+        ListNode temp = head;
+        int counter = 0;
+        while(temp != null)
+        {
+            counter++;
+            temp = temp.next;
+        }
+
+        // Counting Steps
+
+        int steps = counter - n;
+
+        // checking if the Linked list is empty or not
+
+        if(steps == 0)
+        {
+            return head.next;
+        }
+
+        temp = head; // Re-assining the temp to the head
+
+        for(int i = 1;i < steps; i++)
+        {
+            temp = temp.next;
+        }
+
+        // After the loop the temp is excately the place before the node which we have to remove
+
+        temp.next = temp.next.next;
+        return head;        
+    }
+}
