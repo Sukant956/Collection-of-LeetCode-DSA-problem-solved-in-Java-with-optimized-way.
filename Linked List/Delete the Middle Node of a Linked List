@@ -1,0 +1,31 @@
+// Problem: Delete the Middle Node of a Linked List
+// Platform: Leetcode and Striver
+// Approach: Fast and Slow pointer Approach
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Code 
+
+class Solution {
+    public ListNode deleteMiddle(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+
+// Checking whether the Linked list itself is null or not
+
+        if(fast.next == null) 
+        {
+            return null;
+        }
+
+// Traversing and finding the position so that the slow pointer will be at its appropriate position
+
+        while(fast.next.next != null && fast.next.next.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        slow.next = slow.next.next;
+        return head;        
+    }
+}
