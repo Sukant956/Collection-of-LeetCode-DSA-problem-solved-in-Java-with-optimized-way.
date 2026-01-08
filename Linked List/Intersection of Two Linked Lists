@@ -1,0 +1,21 @@
+// Problem: Intersection of Two Linked Lists
+// Platform: LeetCode and Striver
+// Approach: Two-Pointer Technique
+// Time Complexity: O(m + n)
+// Space Complexity: O(1)
+
+// Code 
+
+public class Solution {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        ListNode tempA = headA;
+        ListNode tempB = headB;
+// We are traversing and if any of the head reached at null then we will start the same from the another list
+        while(tempA != tempB)
+        {
+            tempA = tempA != null ? tempA.next : headB; // If headA reaches to null for the next loop it will start from headB
+            tempB = tempB != null ? tempB.next : headA; // // If headB reaches to null for the next loop it will start from headA
+        }
+        return tempA;
+    }
+}
