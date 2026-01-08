@@ -1,0 +1,17 @@
+// Problem: Swapping using third variable 
+
+// Code 
+
+import java.util.*;
+Class Solution{
+public static void main(String []args){
+int a = sc.nextInt();
+int b = sc.nextInt();
+int c;
+c = a;
+a = b;
+b = c;
+System.out.println("After Swapping "+ a);
+System.out.println("After Swapping "+ b);
+}
+}
