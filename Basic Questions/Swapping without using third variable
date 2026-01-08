@@ -1,0 +1,29 @@
+// Swapping without third Variable
+
+import java.util.*;
+class Solution {
+public Static void main(String args[]){
+int a = sc.nextInt();
+int b = sc.nextInt();
+a = a + b;
+b = a - b;
+a = a - b;
+System.out.println("After Swapping "+ a);
+System.out.println("After Swapping "+ b);
+}
+}
+
+// Another approach
+
+import java.util.*;
+class Solution {
+public Static void main(String args[]){
+int a = sc.nextInt();
+int b = sc.nextInt();
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+System.out.println("After Swapping "+ a);
+System.out.println("After Swapping "+ b);
+}
+}
