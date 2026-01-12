@@ -1,0 +1,29 @@
+// Problem: Merge Strings Alternately
+// Platform: LeetCode
+// Approach: Two-Pointer Technique
+// Time Complexity: O(n + m) where n is the length of word1 and m is the length of the word2
+// Space Complexity: O(n + m) 
+
+// Code 
+
+class Solution {
+    public String mergeAlternately(String word1, String word2) {
+
+        StringBuilder result = new StringBuilder(); // creating string builder because it is a mutable means it can be changed.
+
+        int i = 0;
+
+        while(i < word1.length() || i < word2.length()){
+
+            if(i < word1.length()){
+                result.append(word1.charAt(i)); // adding the first word from the word1.
+            }
+
+            if(i < word2.length()){
+                result.append(word2.charAt(i)); // adding the second word from the word2.
+            }
+            i++;
+        }
+        return result.toString();  // toString method is used to convert a string builder,buffer into a string before returning it
+    }
+}
