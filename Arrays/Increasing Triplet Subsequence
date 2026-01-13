@@ -1,0 +1,32 @@
+// Problem: Increasing Triplet Subsequence
+// Platform: LeetCode
+// Approach: Greedy Linear Scan
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+
+// Code 
+
+class Solution {
+    public boolean increasingTriplet(int[] nums) {
+
+// Handeling the test case checking if the array has less than 3 elements
+        if(nums.length < 3){
+            return false;
+        }
+        int k = Integer.MAX_VALUE;  // 2,147,483,647 this the the max value of int
+        int j = Integer.MAX_VALUE;
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] <= k){
+                k = nums[i];
+            }
+            else if(nums[i] <= j){
+                j = nums[i];
+            }
+            else{
+                return true;
+            }
+        }
+        return false;
+    }
+}
