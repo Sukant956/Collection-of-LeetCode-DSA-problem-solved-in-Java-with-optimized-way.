@@ -1,0 +1,27 @@
+// Problem: Contains Duplicate
+// Platform: Leet Code
+// Approach: Hashing
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+
+ // Creating HashMap of type integer 
+        Map<Integer,Integer> hm = new HashMap<Integer,Integer>();
+
+        for(int i = 0;i< nums.length;i++){
+
+// containsKey method is used to check does it contains value or not  
+            if(hm.containsKey(nums[i]))
+            {
+                return true; // if the element repeats we will return true
+            }
+            else {
+                hm.put(nums[i],i);  // we will put value(nums[i]) and index(i) 
+            }
+        }
+        return false;
+    }
+}
