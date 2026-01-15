@@ -1,0 +1,33 @@
+// Problem: Removing Stars From a String
+// Platform: Leetcode
+// Approach: Stack
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+// Code
+
+class Solution {
+    public String removeStars(String s) {
+
+// Creating Stack
+        Stack<Character> stack = new Stack<Character>();
+
+        for(int i = 0;i < s.length(); i++){
+            if(s.charAt(i) != '*'){
+                stack.push(s.charAt(i));
+                continue;
+            }
+            stack.pop();
+        }
+// Handeling the test case that if the string is empty
+        if(stack.isEmpty()){
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        while(!stack.isEmpty()){
+            sb.append(stack.pop());
+        }
+        return sb.reverse().toString();
+    }
+}
