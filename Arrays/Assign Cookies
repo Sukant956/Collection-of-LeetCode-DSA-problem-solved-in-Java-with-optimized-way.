@@ -1,0 +1,33 @@
+// Problem: Assign Cookies
+// Platform: LeetCode
+// Approach: Two-Pointer Greedy Strategy
+// Time Complexity: O(N log N + M log M)
+// Space Complexity: O(1) or O(log N + log M)
+
+// Code
+
+class Solution {
+    public int findContentChildren(int[] g, int[] s) {
+
+ // Sort Both the Arrays
+
+        Arrays.sort(g);
+        Arrays.sort(s);
+
+        int i = 0;
+        int j = 0;
+
+// Finding the length of both the array
+
+        int m = g.length;
+        int n = s.length;
+
+        while(i < m && j < n){
+            if(g[i] <= s[j]){
+                i++;
+            }
+            j++;
+        }
+        return i;
+    }
+}
