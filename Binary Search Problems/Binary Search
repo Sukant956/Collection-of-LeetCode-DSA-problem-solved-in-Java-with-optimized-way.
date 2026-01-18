@@ -1,0 +1,33 @@
+// Problem: Binary Search
+// Platform: LeetCode and Striver
+// Approach: Binary Search
+// Time Complexity: O(1) for best and O(log n) for average and worst case
+// Space Complexity: O(1)
+
+// Code 
+
+class Solution {
+    public int search(int[] nums, int target) {
+
+// Creating two variable which will point to start and end of the given array
+
+        int start = 0;
+        int end  = nums.length - 1;
+
+        while(start <= end) {
+
+            int mid = start + (end - start)/2;  // finding mid
+
+            if(nums[mid] == target){
+                return mid;  // returning the index
+            }
+            else if(nums[mid] > target){
+                end = mid -1;
+            }
+            else {
+                start = mid + 1;
+            }
+        }
+        return -1;
+    }
+}
