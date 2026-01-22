@@ -1,0 +1,35 @@
+// Problem: Search in Rotated Sorted Array II
+// Platform: LeetCode and Striver
+// Approach: Two Pointer Approach
+// Time Complexity: O(1) for best and O(n) for average and worst
+// Space Complexity: O(1)
+
+// Code
+
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int start = 0;
+        int end = nums.length - 1;
+        while(start <= end){
+            if(nums[start] == target || nums[end] == target){
+                return true;
+            }
+            else if(target > nums[start]){
+                while(start < end && nums[start] == nums[start + 1]){
+                    start++;
+                }
+                start++;
+            }
+            else if(target < nums[end]){
+                while(start < end && nums[end - 1] == nums[end]){
+                    end--;
+                }
+                end--;
+            }
+            else {
+                break;
+            }
+        }
+        return false;        
+    }
+}
