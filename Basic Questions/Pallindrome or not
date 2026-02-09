@@ -1,0 +1,26 @@
+// Code
+
+import java.util.*;
+class solution{
+  public static void main(String []args){
+   Scanner sc = new Scanner(system.in);
+
+    System.out.println("Enter a number");
+    int a = sc.nextInt();
+    int c;
+     int d = 0;
+    c = a;
+    while(a != 0){
+     int r = a % 10;
+         a = a / 10;
+         d = d * 10 + r;         
+    }
+    if(c == d){
+     System.out.println("Pallindrome");
+    }
+    else{
+     System.out.println("Not a pallindrome");
+    }
+    
+  }
+}
