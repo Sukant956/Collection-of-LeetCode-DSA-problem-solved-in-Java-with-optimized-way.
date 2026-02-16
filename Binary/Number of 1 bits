@@ -1,0 +1,26 @@
+// Problem: Number of 1 Bits
+// Platform: LeetCode and Striver
+// Approach: AND gate
+// Time Complexity: O(1)
+// Space Complexity: O(1)
+
+// Code
+
+class Solution {
+    public int hammingWeight(int n) {
+        int count = 0;
+        while(n != 0){
+            n = n & (n-1); // Performing And operation
+            count++;
+        }
+        return count;
+    }
+}
+
+// Truth table of AND
+
+A    B    OUTPUT
+0    0      0
+1    0      0
+0    1      1
+1    1      1
