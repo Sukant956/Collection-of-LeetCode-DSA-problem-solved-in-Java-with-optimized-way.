@@ -1,6 +1,6 @@
 // Problem: Reverse Bits
 // Platform: Leetcode and Striver
-// Approach: AND operation and shift
+// Approach: bit-by-bit reconstruction
 // Time complexity: O(1)
 // Space complexity:0(1)
 
