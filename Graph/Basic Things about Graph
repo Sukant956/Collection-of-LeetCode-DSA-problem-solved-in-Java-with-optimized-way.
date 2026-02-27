@@ -1,0 +1,18 @@
+// About Graph
+
+What is Graph ?
+ A graph can be defined as group of the vertices and Edges that are used to connect those vertices.
+
+A graph is consist of two things 
+
+1. A set V of element called node(or point or vertices).
+2. A set E of edge such that each edges in E is unique pair of vertices.
+
+// Termionology Used in the Graph
+1. Adjacent Node 
+2. Degree of Node
+3. Isolated Node -> Node having degree is equal to zero
+4. Path -> To reach from one vertex to another vertex the root followed is called path.
+5. Cycle -> If we start traversing from one node and again we reached at same node is called cycle.
+6. Loop -> If the edge has both same vertex is called loop
+7. Parallel edge -> End or Start is same is called parallel edge and also have more than one edge.
