@@ -1,0 +1,10 @@
+// Breadth First Search
+
+In BFS we use the Queue.
+We will first take the starting point and put it in the stack.
+We will start deleting from the front and rear(last).
+Initially both front and rear will be at the same place.
+We will add the element and start deleting the element and we will put the adjacent of the deleted element.
+We will repeat the above step and also made one output visited list and we will add put the deleted node.
+We will repeat the above process until the stack empty.
+and return the visited node / output.
