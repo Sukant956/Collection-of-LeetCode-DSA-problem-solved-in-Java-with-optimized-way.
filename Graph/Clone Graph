@@ -1,0 +1,32 @@
+// Problem: Clone Graph
+// Platform: LeetCode and Striver
+// Approach: Graph
+// Time Complexity: O(V + E)
+// Space Complexity: O(V + E)
+
+// Code 
+
+class Solution {
+    public Node cloneGraph(Node node) {
+        // For base case
+        if(node == null) return null;
+
+        Map<Node,Node> map = new HashMap<>();
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(node);
+
+        map.put(node,new Node(node.val,new ArrayList<>()));
+
+        while(!queue.isEmpty()){
+            Node h = queue.poll();
+            for(Node neighbors : h.neighbors){
+                if(!map.containsKey(neighbors)){
+                    map.put(neighbors,new Node(neighbors.val,new ArrayList<>()));
+                    queue.add(neighbors);
+                }
+                map.get(h).neighbors.add(map.get(neighbors));
+            } 
+        }
+        return map.get(node);
+    }
+}
