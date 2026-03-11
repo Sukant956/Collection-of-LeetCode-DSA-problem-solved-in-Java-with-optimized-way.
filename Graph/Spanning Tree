@@ -1,3 +1,4 @@
 Spanning Tree
 It is a tree created from the graph with a minimum possible edge.
 minimum cost spanning tree
+It is a tree created from the graph with a cost.
