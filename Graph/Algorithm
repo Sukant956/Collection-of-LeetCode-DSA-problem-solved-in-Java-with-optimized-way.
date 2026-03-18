@@ -9,3 +9,5 @@ We will mention all the adjacent node which is related to the first point and we
 We will now pop the top most element and put in the output i.e. visited node and we will put the topmost's adjacent node in the stack and we will repeat the whole process until stack get empty and put all the value in the oout visited node.
 
 finally we will return the answer as an output.
+
+Breadth First Search
