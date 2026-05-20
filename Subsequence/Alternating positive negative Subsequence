@@ -1,0 +1,27 @@
+// Problem: Alternating positive negative Subsequence
+// Platform: LeetCode
+// Approach:
+// Time Complexty:
+// Space Complexity:
+
+// Code
+
+class Solution{
+    public int longestAlternatingPosNeg(int []nums){
+       if(nums.length == 0){
+         return 0;
+       }
+       int expect = 0;
+       for(int num: nums){
+          if(expect == 0 && nums > 0){
+             count++;
+             expect = 1;
+          }
+          else if(expect == 1 && num < 0 ){
+             count++;
+             expect = 0;
+          }
+       }
+      return count;
+    }
+}
