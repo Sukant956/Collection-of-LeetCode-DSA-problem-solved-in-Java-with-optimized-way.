@@ -1,0 +1,32 @@
+// Problem: Minimum Platform Required
+// Platform: LeetCode
+// Approach:
+// Time Complexity:
+// Space Complexity:
+
+// Code
+
+class Solution{
+   public static int findPlatform(int a[],int d[],int n){
+      Arrays.sort(a);
+      Arrays.sort(b);
+
+      int count =0;
+      int ans = 0;
+
+      int i = 0,j = 0;
+
+      while(i < n){
+          if(a[i] <= d[j]){
+             count++;
+             ans = Math.max(ans,count);
+             i++;
+          }
+          else if(a[i] > d[j]){
+             count--;
+              j++;
+          }
+      }
+      return ans;
+   }
+}
