@@ -1,8 +1,8 @@
 // Problem: Jump Game
 // Platform: Leetcode
-// Approach:
-// Time Complexity:
-// Space Complexity:
+// Approach: Using for loop
+// Time Complexity: O(n)
+// Space Complexity: O(1)
 
 // Code
 
