@@ -1,8 +1,8 @@
 // Problem: Alternating positive negative Subsequence
 // Platform: LeetCode
-// Approach:
-// Time Complexty:
-// Space Complexity:
+// Approach: 
+// Time Complexty: O(n)
+// Space Complexity: O(n)
 
 // Code
 
