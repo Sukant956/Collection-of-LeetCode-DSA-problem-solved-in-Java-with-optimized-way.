@@ -1,8 +1,8 @@
 // Problem: Longest Alternating Positive-Negative Subarray
 // Platform: LeetCode
-// Approach:
-// Time Complexity:
-// Space Complexity:
+// Approach: For Loop
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
 // Code
 
