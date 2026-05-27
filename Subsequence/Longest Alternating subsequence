@@ -1,8 +1,8 @@
 // Problem:Longest Alternating subsequence
 // Platform: GFG
 // Approach:
-// Time Complexity:
-// Space Complexity:
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 
 // Code
 
