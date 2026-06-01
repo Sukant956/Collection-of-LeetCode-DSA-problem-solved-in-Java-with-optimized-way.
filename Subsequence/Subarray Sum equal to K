@@ -1,0 +1,29 @@
+// Problem: Subarray Sum equal to K
+// Platform:
+// Approach:
+// Time Complexity:
+// Space Complexity:
+
+// Code
+
+class Solution{
+   public long subArraySumwithK(int ArrayList<Integer>Arr,int N){
+       long numSum = 0;
+       long sum = 0;
+       int index = 0;
+
+       while(index < N && index < K){
+         sum += Arr.get(index);
+         index++;
+       }
+        maxSum = sum;
+        for(int i = 1;i < N -K + 1;i++){
+         int prevElement = Arr.get(i -1);
+         int nextElement = Arr.get(i + k - 1);
+
+         sum = sum - prevElement + nextElement;
+         maxSum = Math.max(sum,maxSum);
+        }
+   }
+   return maxSum;
+}
