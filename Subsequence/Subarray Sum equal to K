@@ -1,6 +1,6 @@
 // Problem: Subarray Sum equal to K
 // Platform: LeetCode
-// Approach:
+// Approach: While loop and for loop
 // Time Complexity: O(n)
 // Space Complexity: O(1)
 
