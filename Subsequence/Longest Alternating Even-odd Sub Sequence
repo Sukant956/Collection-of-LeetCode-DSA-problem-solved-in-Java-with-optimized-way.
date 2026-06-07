@@ -1,0 +1,24 @@
+// Problem: Longest Alternating Even-odd Sub Sequence
+// Platform:
+// Approach:
+// Time Complexity:
+// Space Complexity:
+
+// Code
+
+class Solution{
+  public int longestOddEvenSubsequence(int nums[]){
+       int maxLen = 1;
+       int currLen = 1;
+       for(int i = 1;i < nums.length;i++){
+           if((nums[i] % 2) != (nums[i - 1] % 2)){
+              curLen++;
+           }
+           else{
+              currLen = 1;
+           }
+          maxLen = Math.max(maxLen,currLen);
+       }
+   return maxLen; 
+  }
+}
