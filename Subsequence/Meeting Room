@@ -7,6 +7,26 @@
 // Code
 
 class Solution{
+   public int minMittingRooms(List<Integer> start,List<Integer> end){
+      // Use Try map
 
-   
+      Map<Integer,Integer> events = new TreeMap<>();
+      int n = start.size();
+      for(int i = 0;i < n;i++){
+         int startTime = start.get(i);
+         int endTime = end.get(i);
+
+         event.put(startTime,events.getOrDefault(startTime,0) + 1);
+         event.put(endTime,events.getOrDefault(startTime,0) - 1); 
+      }
+      int overlap = 0;
+      int maxOverlap = 0;
+      for(Map.Entry<Integer,Integer> entry: events.entrySet()){
+         overlaps += entry.getValue();
+         if(overlaps > maxOverlaps){
+            maxOverlaps = overlaps;
+         }
+      }
+      return maxOverlaps;
+   }   
 }
