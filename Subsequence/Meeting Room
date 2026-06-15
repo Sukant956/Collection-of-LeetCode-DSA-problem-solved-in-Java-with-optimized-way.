@@ -1,6 +1,6 @@
 // Problem: Meeting Room
 // Platform: GFG
-// Approach:
+// Approach: Prefix Sum
 // Time Complexity:  O(n)
 // Space Complexity: O(n)
 
